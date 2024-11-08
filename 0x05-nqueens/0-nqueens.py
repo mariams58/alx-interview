@@ -8,7 +8,6 @@ def solve_nqueens(n):
     solutions = []
     board = []
 
-
     def safe_pos(row, col):
         """Check if placing a queen at position is safe from other Queens
         Args:
@@ -22,14 +21,12 @@ def solve_nqueens(n):
                 return False
         return True
 
-
     def place_queens(row):
         """Places Queens row by row using recursion"""
         if row == n:
             # Add current position to board
             solutions.append(board[:])
             return
-
 
         for col in range(n):
             if safe_pos(row, col):
