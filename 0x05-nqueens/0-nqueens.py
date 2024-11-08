@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" N- Queens Module """
 import sys
 
 
@@ -9,7 +10,13 @@ def solve_nqueens(n):
 
 
     def safe_pos(row, col):
-        """Check if placing a queen at position is safe from other Queens"""
+        """Check if placing a queen at position is safe from other Queens
+        Args:
+            row (int): board row
+            col (int): board col
+        Returns:
+            bool: True if safe else false
+        """
         for r, c in board:
             if c == col or r + c == row + col or r - c == row - col:
                 return False
